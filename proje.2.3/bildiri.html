@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+<h1 style="font-size:20px">XSS - Cross Site Scripting</h1>
+<hr>
+<p>sömürmek için url</p>
+<hr>
+<h2 style="font-size:16px"><p>Zafiyet Neden Kaynaklanmaktadır</p></h2>
+<p>Bu stored xss zafiyetidir.Bu zafiyet kullanın textbox kutularına girdiği stringlerin kontrol edilmemesi yani filtrelenmemesinden kaynaklanan bir açıklıktır.
+İlgili metin alanına herhangi html taglarını kullanarak yazdığımız bir girdide veri tabanına taglar ile kayıt yapar ve adminin kullanıcıları gördüğü pencere listelendiğinde
+kaydı html tag'ine uygun bir biçimde yaptığı görülür.</p>
+<hr>
+<h2 style="font-size:16px"><p>Zafiyetin Engellenmesi İçin Kaynak Kodda Hangi Değişikliğin Yapılması Gerekli</p></h2>
+<p>Bu zafiyeti gidermek için ilgili metin kutusuna girilecek olan stringleri html taglarından ve özel karakterlerden ayırmak yani filtreleme yapmak.
+Bu filtremeleri yapmada iki fonksiyonumuz var:
+<p>  1-)strip_tags($degisken);
+<p>2-)htmlspecialchars($degisken);
+<p>Bunları kullanılark ilgili alan girilen stringleri özel karakterlerden ve html tag'larından ayırmış oluyoruz.
+XSS açğını engellemenin bir başka yoluda get yerine post kullanmaktır
+Bu işlemin veri tabanına kayıt kısmında gerçekleşmesi gereklidir;</p>
+
+<p style="font-size:16px"> 1-) ekle.php sayfasında 8 ve 9.satırlarda şu değişikliklerin
+   <p style="font-size:16px">$ad=strip_tags($_GET["ad"]);
+   <p style="font-size:16px"> $sifre=strip_tags($_GET["sifre"]);   
+   <p style="font-size:16px">2-)ekle.php sayfasında 5 8 ve 9. satırlarda
+   <p style="font-size:16px">if ($_POST) 
+   <p style="font-size:16px" >$ad=$_POST["ad"];
+   <p style="font-size:16px">$sifre=$_POST["sifre"];
+   
+   <p style="font-size:16px">3-)ekle.php sayfasında 26.satırda
+   <p style="font-size:16px"> method="get" kodunda get yerine "post" 
+   <p style="font-size:16px">yazılması ile zafiyet giderilmiş olur.
+    </p>
+<hr>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+            
+            .footer-caner1 {
+                background-color:#036;
+                border-top: 5px chartreuse solid;
+                
+               overflow-x: hidden;
+                
+                text-align:left;
+                
+                font:normal 16px sans-serif;
+                padding:45px 50px;margin-top:0px
+                    
+            }
+.footer-caner1 .footer-left p{
+    color:#8f9296;font-size:14px;
+    
+     
+            }
+
+
+
+.footer-caner1 .footer-left,.footer-caner1 .footer-right{text-align:center
+            }
+
+.footer-caner1 .footer-left p.footer-links{line-height:1.8}
+
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            
+            body {
+                background-color:#ccf;
+                font-family: Open Sans, Arial, sans-serif;
+                overflow-x: hidden;
+            }
+            
+            nav {
+               
+                position: fixed;
+                z-index: 1000;
+                top: 0;
+                bottom: 0;
+                width: 200px;
+                background-color: #036;
+                transform: translate3d(-200px, 0, 0);
+                transition: transform 0.4s ease;
+            }
+            
+            
+            .active-nav nav {
+                transform: translate3d(0, 0, 0);
+            }
+            nav img{
+                margin-top: 20px;
+                margin-left:20px;
+                
+            }
+            nav ul {
+                list-style: none;
+                margin-top: 50px;
+                background-color: #036
+             
+            }
+            
+            nav ul li
+            { 
+                border:2px solid darkblue;
+               
+                margin-bottom:3px;
+            }
+            
+            nav ul li a {
+                text-decoration: none;
+                display: block;
+                text-align: center;
+                color: #fff;
+                padding: 10px 0;
+               
+            }
+            
+            nav a i{
+                
+                color:floralwhite;
+            }
+            
+            nav ul li a:hover{
+               color: #036;
+                background-color:#f1f1f1;
+            }
+            
+            .nav-toggle-btn {
+	display: block;
+	position: absolute;
+	left: 205px;
+	width: 60px;
+	height: 70px;
+	top: 10px;
+               
+            }
+            
+            .content {
+                padding-top:100px;
+                height:350px;
+                background-color: #ccf;
+                text-align:left;
+                
+               
+            }
+                
+          
+
+
+
+          /* .active-nav .content {
+                transform: translate3d(50px, 0, 0);
+            }
+			nav bar açıldığında metni ne kadar ileri atmalı
+			*/
+            
+            header{
+               background-color:#036;
+               border-bottom: 5px chartreuse solid;
+               
+            
+               overflow-x: hidden;
+                
+                text-align:left;
+            
+                font:normal 16px sans-serif;
+               height: 170px;
+            }
+
+.content div{
+    padding-left: :210px;
+    border-right:20px;
+}
+              
+.yaz{
+	width: 1004px;
+	height: 513px;
+	background-color: #ccf;
+	/*position: absolute;*/
+	padding-left: 214px;
+	
+	  
+    }
+       
+	   
+	   /*xssgirisuygulama için*/
+	   
+	  
